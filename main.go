@@ -1,7 +1,15 @@
 package main
 
-import "github.com/tetor/purin/cmd"
+import (
+    "fmt"
+    "os"
+
+    "github.com/tetor/purin/cmd"
+)
 
 func main() {
-	cmd.Execute()
+    if err := cmd.Execute(); err != nil {
+        fmt.Println(err)
+        os.Exit(1)
+    }
 }
