@@ -9,7 +9,7 @@ purin get tetor/some
 # Same
 purin get github.com/tetor/some.git
 
-purin delete github.com/
+purin delete github.com/tetor.some.git
 ```
 
 Please add path `$HOME/purin/bin`
