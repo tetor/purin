@@ -7,7 +7,7 @@ import (
 )
 
 // getCmd represents the get command
-var getCmd = &cobra.Command{
+var GetCmd = &cobra.Command{
 	Use:   "get",
 	Short: "get wild",
 	Long: `Desc`,
@@ -17,7 +17,7 @@ var getCmd = &cobra.Command{
 }
 
 func init() {
-	RootCmd.AddCommand(getCmd)
+	RootCmd.AddCommand(GetCmd)
 
 	// Here you will define your flags and configuration settings.
 
