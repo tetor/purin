@@ -1,7 +1,10 @@
-.PHONY build test
+build:
+	go build
 
 test:
 	go test
 
-build: test
-	go build
+install:
+	echo 'make install running'
+
+.PHONY build test install
