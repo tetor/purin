@@ -2,8 +2,10 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
+	"gopkg.in/src-d/go-git.v4"
 )
 
 // getCmd represents the get command
@@ -13,6 +15,15 @@ var GetCmd = &cobra.Command{
 	Long: `Desc`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("get called")
+
+		_, err := git.PlainClone("/Users/tetor/purin/src/purin", false, &git.CloneOptions{
+			URL: "https://github.com/tetor/purin.git",
+			Progress: os.Stdout,
+		})
+
+		if err != nil {
+			fmt.Errorf("error %v", err)
+		}
 	},
 }
 
